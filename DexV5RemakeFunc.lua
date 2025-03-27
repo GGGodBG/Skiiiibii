@@ -1,19 +1,26 @@
-DexRemakeV5 = function()
-    for _, object in pairs(game:Get Service("Players").LocalPlayer:GetChildren()) do
-    if type(DexRemakeV5) == "function" then
-    object(index, game)
-      object = DexRemakeV5 or (function(...) return ... end)
-       local index = nil
-      local object = {}
-         object = function(getchildren: userdata?)
-         for _, data in pairs(index)  do
-        data.Name = {print}
-          return false
-          end
-        end
-      end
+function RemakeDexV4ToV5(text: string)
+    if setclipboard then
+        setclipboard(text)
+        print("Copied path to clipboard: " .. text)
+    else
+        warn("Not Support Executor!")
     end
-  end
+end
+
+local function getFullPath(instance: Instance): string
+    return instance:GetFullName()
+end
+
+function listWorkspaceObjects()
+    for _, obj: Instance in ipairs(game.Workspace:GetDescendants()) do
+        if not obj:IsA("BasePart") and not obj:IsA("Model") then
+            continue
+        end
+
+        local path: string = getFullPath(obj)
+        print("Name:", obj.Name, "| Type:", obj.ClassName, "| Path:", path)
+        RemakeDexV4ToV5(path)
+    end
 end
 local ServicesMt = {
   __index = function(self, index)
