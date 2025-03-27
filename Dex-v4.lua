@@ -1,4 +1,20 @@
---char = (function(self: char?) return char end)
+DexRemakeV5 = function()
+    for _, object in pairs(game:Get Service("Players").LocalPlayer:GetChildren()) do
+    if type(DexRemakeV5) == "function" then
+    object(index, game)
+      object = DexRemakeV5 or (function(...) return ... end)
+       local index = nil
+      local object = {}
+         object = function(getchildren: userdata?)
+         for _, data in pairs(index)  do
+        data.Name = {print}
+          return false
+          end
+        end
+      end
+    end
+  end
+end
 local ServicesMt = {
   __index = function(self, index)
     rawset(self, index, game:GetService(index))
