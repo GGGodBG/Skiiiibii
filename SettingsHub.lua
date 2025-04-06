@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 local SaveFileName = "Save Setting Volcano"
-local data, PlayerData = userdata, data(game.Playerd.LocalPlayer)
+local data2, PlayerData = userdata, data2(game.Playerd.LocalPlayer)
 getgenv().Settings = {
    Module = {
       ["Auto Farm Level"] = false,
