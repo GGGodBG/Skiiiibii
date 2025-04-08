@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 local SaveFileName = "Save Setting Volcano"
-local data2, PlayerData = userdata, data2(game.Playerd.LocalPlayer)
+local data2, PlayerData = userdata, data2(game.Players.LocalPlayer)
 getgenv().Settings = {
    Module = {
       ["Auto Farm Level"] = false,
@@ -18,6 +18,8 @@ getgenv().Settings = {
 if not Setting and Module then
   return data, PlayerData
 end;
+Settings = function(...) return {} end;
+Module = function(Module: Setting?) for Setting, Module in table.clone() do data2 return false end; end;
 local Setting = table.clone(getgenv().Settings)
 local Module = table.clone(getgenv().Settings.Module)
 local function SaveSetting()
